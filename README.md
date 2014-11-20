@@ -1,4 +1,4 @@
-# Signifyd Ruby 
+# Signifyd Ruby
 
 [![Build Status](https://travis-ci.org/signifyd/signifyd-ruby.png?branch=master)](https://travis-ci.org/signifyd/signifyd-ruby)
 [![Code Climate](https://codeclimate.com/github/signifyd/signifyd-ruby.png)](https://codeclimate.com/github/signifyd/signifyd-ruby)
