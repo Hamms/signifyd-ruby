@@ -1,5 +1,6 @@
 # External Dependencies
 require 'i18n'
+require 'set'
 require 'active_support'
 require 'rest_client'
 require 'uri'
