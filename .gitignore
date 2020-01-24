@@ -2,4 +2,5 @@
 /*.gem
 /*.crt
 /.rvmrc
+/.idea
 /coverage

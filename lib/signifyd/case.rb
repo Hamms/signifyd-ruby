@@ -1,7 +1,7 @@
 module Signifyd
   class Case < Resource
-    include Signifyd::API::Create
-    include Signifyd::API::List
-    include Signifyd::API::Update
+    include Signifyd::API::Case::Create
+    include Signifyd::API::Case::List
+    include Signifyd::API::Case::Update
   end
 end

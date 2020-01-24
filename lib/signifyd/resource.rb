@@ -5,7 +5,7 @@ module Signifyd
     end
     
     def self.url
-      raise NotImplementedError.new('APIResource is an abstract class. You should perform actions on its subclasses (Case).') if self == Resource
+      raise NotImplementedError.new('APIResource is an abstract class. You should perform actions on its implementations.') if self == Resource
      "#{Signifyd.api_version}/#{CGI.escape(class_name.downcase)}s"
     end
     
