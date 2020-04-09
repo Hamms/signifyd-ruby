@@ -354,7 +354,7 @@ module Signifyd
   def self.handle_api_error(rcode, rbody)
     error = {}
     case rcode
-    when 400, 404
+    when 400
       error[:message] = "Invalid request"
       error[:param]  = ""
       raise invalid_request_error error, rcode, rbody
@@ -362,6 +362,10 @@ module Signifyd
       error[:message] = "Authentication error"
       error[:param]  = ""
       raise authentication_error error, rcode, rbody
+    when 404
+      error[:message] = "Not found"
+      error[:param]  = ""
+      raise not_found_error error, rcode, rbody
     else
       error[:message] = "API error"
       error[:param]  = ""
@@ -371,6 +375,10 @@ module Signifyd
 
   def self.invalid_request_error(error, rcode, rbody)
     raise InvalidRequestError.new(error[:message], error[:param], rcode, rbody)
+  end
+  
+  def self.not_found_error(error, rcode, rbody)
+    raise NotFoundError.new(error[:message], error[:param], rcode, rbody)
   end
 
   def self.authentication_error(error, rcode, rbody)
