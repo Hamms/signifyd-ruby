@@ -380,7 +380,7 @@ describe Signifyd do
           Signifyd.request(:post, '/v2/cases', hash)
         }
 
-        it { lambda { subject }.should raise_error(Signifyd::InvalidRequestError) }
+        it { lambda { subject }.should raise_error(Signifyd::NotFoundError) }
       end
     end
   end
@@ -428,7 +428,7 @@ describe Signifyd do
       Signifyd.api_key = nil
     }
 
-    context 'when 400 or 404' do
+    context 'when 400' do
       subject {
         Signifyd.handle_api_error(400, "{\"error\":true}")
       }
@@ -442,6 +442,14 @@ describe Signifyd do
       }
 
       it { lambda { subject }.should raise_error(Signifyd::AuthenticationError) }
+    end
+
+    context 'when 404' do
+      subject {
+        Signifyd.handle_api_error(404, "{\"error\":true}")
+      }
+
+      it { lambda { subject }.should raise_error(Signifyd::NotFoundError) }
     end
 
     context 'when 500' do
