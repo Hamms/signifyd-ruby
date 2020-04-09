@@ -31,6 +31,7 @@ require 'signifyd/errors/api_connection_error'
 require 'signifyd/errors/authentication_error'
 require 'signifyd/errors/invalid_request_error'
 require 'signifyd/errors/not_implemented_error'
+require 'signifyd/errors/not_found_error'
 
 module Signifyd
   # ssl_bundle_path
