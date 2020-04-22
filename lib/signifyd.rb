@@ -260,6 +260,10 @@ module Signifyd
         case_id = params.delete(:case_id)
         params.reject! { |k| k == :case_id || k == 'case_id' }
         url << "/#{case_id}"
+
+        if params.has_key?(:guaranteeDisposition) || params.has_key?('guaranteeDisposition')
+          url << '/guarantee'
+        end
       end
     when 'delete'
 
