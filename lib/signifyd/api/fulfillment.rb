@@ -2,11 +2,11 @@
 
 module Signifyd
   module API
-    module Create
+    module Fulfillment
       module ClassMethods
-        def create(params={}, api_key=nil)
+        def create(order_id, params={}, api_key=nil)
           raise InvalidRequestError.new('You have passed invalid parameters to Case.create') if params == {}
-          Signifyd.request(:post, self.url, params, api_key)
+          Signifyd.request(:post, "#{self.url}/#{order_id}", params, api_key)
         end
       end
 

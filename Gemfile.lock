@@ -100,3 +100,6 @@ DEPENDENCIES
   signifyd!
   simplecov
   webmock
+
+BUNDLED WITH
+   2.1.4

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # External Dependencies
 require 'i18n'
 require 'set'
@@ -18,7 +20,9 @@ require 'signifyd/resource'
 require 'signifyd/api/create'
 require 'signifyd/api/list'
 require 'signifyd/api/update'
+require 'signifyd/api/fulfillment'
 require 'signifyd/case'
+require 'signifyd/fulfillment'
 
 # Internal Dependencies
 require 'signifyd/errors/signifyd_error'

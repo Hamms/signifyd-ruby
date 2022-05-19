@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class SignifydRequests
   class << self
     def valid_case
@@ -118,6 +120,153 @@ class SignifydRequests
     
     def invalid_case_non_existent_key
       "{\"attackMethod\":\"STOLEN_CC\",\"purchase\":{\"browserIpAddress\":\"50.141.59.109\",\"createdAt\":\"2013-02-21T18:37:35-05:00\",\"hotDogs\":\"with ketchup\",\"currency\":\"CAD\",\"totalPrice\":\"495.00\",\"shippingPrice\":\"20.00\",\"products\":[{\"itemId\":272111,\"itemName\":\"Intuitive 4th generation Graphic Interface\",\"itemQuantity\":5,\"itemPrice\":\"59.53\",\"itemWeight\":7}]},\"recipient\":{\"fullName\":\"Courtney Cruickshank\",\"confirmationEmail\":null,\"deliveryAddress\":{\"streetAddress\":\"22660 Greenholt Camp\",\"unit\":null,\"city\":\"Palo Alto\",\"provinceCode\":\"CA\",\"postalCode\":\"94306\",\"countryCode\":\"US\",\"latitude\":\"37.4248\",\"longitude\":\"-122.148\"}},\"card\":{\"cardHolderName\":\"Courtney Cruickshank\",\"bin\":null,\"billingAddress\":{\"streetAddress\":\"22660 Greenholt Camp\",\"unit\":null,\"city\":\"Palo Alto\",\"provinceCode\":\"CA\",\"postalCode\":\"94306\",\"countryCode\":\"US\",\"latitude\":\"37.4248\",\"longitude\":\"-122.148\"}},\"userAccount\":{\"email\":\"tom_berge@breitenbergbauch.org\",\"username\":\"tamia\",\"phone\":\"(715)038-1226\",\"createdDate\":null,\"accountNumber\":null,\"lastOrderId\":null,\"aggregateOrderCount\":null,\"aggregateOrderDollars\":null,\"lastUpdateDate\":null},\"seller\":{\"name\":\"Amazon\",\"domain\":\"amazon.com\",\"shipFromAddress\":{\"streetAddress\":\"1850 Mercer Rd\",\"unit\":null,\"city\":\"Lexington\",\"provinceCode\":\"KY\",\"postalCode\":\"40511\",\"countryCode\":\"US\",\"latitude\":null,\"longitude\":null},\"corporateAddress\":{\"streetAddress\":\"410 Terry Ave\",\"unit\":\"3L\",\"city\":\"Seattle\",\"provinceCode\":\"WA\",\"postalCode\":\"98109\",\"countryCode\":\"US\",\"latitude\":null,\"longitude\":null}}}"
+    end
+
+    def valid_fulfillment
+      {
+        "fulfillments" => [
+          {
+            "id" => 1,
+            "orderId" => "R017650532",
+            "createdAt" => "2022-05-19T15:41:45.848-05:00",
+            "recipientName" => "User Test",
+            "deliveryEmail" => "spree@example.com",
+            "fulfillmentStatus" => "COMPLETE",
+            "shipmentStatus" => "DELIVERED",
+            "confirmationName" => "Default Warehouse",
+            "confirmationPhone" => "",
+            "shippingCarrier" => "FedEx Ground",
+            "trackingNumbers" =>  [
+              "273340401320"
+            ],
+            "products" =>  [
+              {
+                "itemId" => 25,
+                "itemName" => "Test Product 1",
+                "itemQuantity" => 4,
+                "itemPrice" => "169.65",
+                "itemIsDigital" => "false"
+              }
+            ],
+            "deliveryAddress" => {
+              "address" =>  {
+                "streetAddress" => "110 Windy Ridge Pkwy SE",
+                "unit" => "",
+                "city" => "Atlanta",
+                "provinceCode" => "GA",
+                "postalCode" => "30339",
+                "countryCode" => "US"
+              }
+            }
+          },
+          {
+            "id" => 2,
+            "orderId" => "R017650532",
+            "createdAt" => "2022-05-19T15:41:45.989-05:00",
+            "recipientName" => "User Test",
+            "deliveryEmail" => "spree@example.com",
+            "fulfillmentStatus" => "COMPLETE",
+            "shipmentStatus" => "DELIVERED",
+            "confirmationName" => "Default Warehouse",
+            "confirmationPhone" => "",
+            "shippingCarrier" => "FedEx Ground",
+            "trackingNumbers" =>  [
+              "273340403080"
+            ],
+            "products" =>  [
+              {
+                "itemId" => 25,
+                "itemName" => "Test Product 2",
+                "itemQuantity" => 4,
+                "itemPrice" => "169.65",
+                "itemIsDigital" => "false"
+              }
+            ],
+            "deliveryAddress" => {
+              "address" =>  {
+                "streetAddress" => "110 Windy Ridge Pkwy SE",
+                "unit" => "",
+                "city" => "Atlanta",
+                "provinceCode" => "GA",
+                "postalCode" => "30339",
+                "countryCode" => "US"
+              }
+            }
+          },
+          {
+            "id" => 3,
+            "orderId" => "R017650532",
+            "createdAt" => "2022-05-19T15:41:46.022-05:00",
+            "recipientName" => "User Test",
+            "deliveryEmail" => "spree@example.com",
+            "fulfillmentStatus" => "COMPLETE",
+            "shipmentStatus" => "DELIVERED",
+            "confirmationName" => "Default Warehouse",
+            "confirmationPhone" => "",
+            "shippingCarrier" => "FedEx Ground",
+            "trackingNumbers" =>  [
+              "273340404330"
+            ],
+            "products" =>  [
+              {
+                "itemId" => 25,
+                "itemName" => "Test Product 3",
+                "itemQuantity" => 4,
+                "itemPrice" => "169.65",
+                "itemIsDigital" => "false"
+              }
+            ],
+            "deliveryAddress" => {
+              "address" =>  {
+                "streetAddress" => "110 Windy Ridge Pkwy SE",
+                "unit" => "",
+                "city" => "Atlanta",
+                "provinceCode" => "GA",
+                "postalCode" => "30339",
+                "countryCode" => "US"
+              }
+            }
+          },
+          {
+            "id" => 4,
+            "orderId" => "R017650532",
+            "createdAt" => "2022-05-19T15:41:46.049-05:00",
+            "recipientName" => "User Test",
+            "deliveryEmail" => "spree@example.com",
+            "fulfillmentStatus" => "COMPLETE",
+            "shipmentStatus" => "DELIVERED",
+            "confirmationName" => "Default Warehouse",
+            "confirmationPhone" => "",
+            "shippingCarrier" => "FedEx Ground",
+            "trackingNumbers" =>  [
+              "273340405782"
+            ],
+            "products" =>  [
+              {
+                "itemId" => 25,
+                "itemName" => "Test Product 4",
+                "itemQuantity" => 4,
+                "itemPrice" => "169.65",
+                "itemIsDigital" => "false"
+              }
+            ],
+            "deliveryAddress" => {
+              "address" =>  {
+                "streetAddress" => "110 Windy Ridge Pkwy SE",
+                "unit" => "",
+                "city" => "Atlanta",
+                "provinceCode" => "GA",
+                "postalCode" => "30339",
+                "countryCode" => "US"
+              }
+            }
+          }
+        ]
+      }
+    end
+
+    def correct_fulfillment_json
+      "{\"fulfillments\":[{\"id\":1,\"orderId\":\"R017650532\",\"createdAt\":\"2022-05-19T15:41:45.848-05:00\",\"recipientName\":\"User Test\",\"deliveryEmail\":\"spree@example.com\",\"fulfillmentStatus\":\"COMPLETE\",\"shipmentStatus\":\"DELIVERED\",\"confirmationName\":\"Default Warehouse\",\"confirmationPhone\":\"\",\"shippingCarrier\":\"FedEx Ground\",\"trackingNumbers\":[\"273340401320\"],\"products\":[{\"itemId\":25,\"itemName\":\"Test Product 1\",\"itemQuantity\":4,\"itemPrice\":\"169.65\",\"itemIsDigital\":\"false\"}],\"deliveryAddress\":{\"address\":{\"streetAddress\":\"110 Windy Ridge Pkwy SE\",\"unit\":\"\",\"city\":\"Atlanta\",\"provinceCode\":\"GA\",\"postalCode\":\"30339\",\"countryCode\":\"US\"}}},{\"id\":2,\"orderId\":\"R017650532\",\"createdAt\":\"2022-05-19T15:41:45.989-05:00\",\"recipientName\":\"User Test\",\"deliveryEmail\":\"spree@example.com\",\"fulfillmentStatus\":\"COMPLETE\",\"shipmentStatus\":\"DELIVERED\",\"confirmationName\":\"Default Warehouse\",\"confirmationPhone\":\"\",\"shippingCarrier\":\"FedEx Ground\",\"trackingNumbers\":[\"273340403080\"],\"products\":[{\"itemId\":25,\"itemName\":\"Test Product 2\",\"itemQuantity\":4,\"itemPrice\":\"169.65\",\"itemIsDigital\":\"false\"}],\"deliveryAddress\":{\"address\":{\"streetAddress\":\"110 Windy Ridge Pkwy SE\",\"unit\":\"\",\"city\":\"Atlanta\",\"provinceCode\":\"GA\",\"postalCode\":\"30339\",\"countryCode\":\"US\"}}},{\"id\":3,\"orderId\":\"R017650532\",\"createdAt\":\"2022-05-19T15:41:46.022-05:00\",\"recipientName\":\"User Test\",\"deliveryEmail\":\"spree@example.com\",\"fulfillmentStatus\":\"COMPLETE\",\"shipmentStatus\":\"DELIVERED\",\"confirmationName\":\"Default Warehouse\",\"confirmationPhone\":\"\",\"shippingCarrier\":\"FedEx Ground\",\"trackingNumbers\":[\"273340404330\"],\"products\":[{\"itemId\":25,\"itemName\":\"Test Product 3\",\"itemQuantity\":4,\"itemPrice\":\"169.65\",\"itemIsDigital\":\"false\"}],\"deliveryAddress\":{\"address\":{\"streetAddress\":\"110 Windy Ridge Pkwy SE\",\"unit\":\"\",\"city\":\"Atlanta\",\"provinceCode\":\"GA\",\"postalCode\":\"30339\",\"countryCode\":\"US\"}}},{\"id\":4,\"orderId\":\"R017650532\",\"createdAt\":\"2022-05-19T15:41:46.049-05:00\",\"recipientName\":\"User Test\",\"deliveryEmail\":\"spree@example.com\",\"fulfillmentStatus\":\"COMPLETE\",\"shipmentStatus\":\"DELIVERED\",\"confirmationName\":\"Default Warehouse\",\"confirmationPhone\":\"\",\"shippingCarrier\":\"FedEx Ground\",\"trackingNumbers\":[\"273340405782\"],\"products\":[{\"itemId\":25,\"itemName\":\"Test Product 4\",\"itemQuantity\":4,\"itemPrice\":\"169.65\",\"itemIsDigital\":\"false\"}],\"deliveryAddress\":{\"address\":{\"streetAddress\":\"110 Windy Ridge Pkwy SE\",\"unit\":\"\",\"city\":\"Atlanta\",\"provinceCode\":\"GA\",\"postalCode\":\"30339\",\"countryCode\":\"US\"}}}]}"
     end
   end
 end
