@@ -7,8 +7,8 @@ Gem::Specification.new do |s|
   s.summary     = 'Ruby bindings for the Signifyd API'
   s.description = 'A ruby wrapper for the Singifyd fraud detection API.'
   s.license     = 'MIT'
-  s.authors     = ['Alex Manelis']
-  s.email       = ['manelis@signifyd.com']
+  s.authors     = ['Alex Manelis', 'Jonathan Tapia']
+  s.email       = ['manelis@signifyd.com', 'jtapia.dev@gmail.com']
   s.homepage    = 'https://signifyd.com/docs/api'
 
   s.files = Dir['Rakefile', '{bin,lib,spec}/**/*', 'README*'] & `git ls-files`.split("\n")
